@@ -1,0 +1,49 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #55ACEE;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-header {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+.search-button {
+  cursor: pointer;
+  padding: .5vh 1vw;
+  color: #fff;
+  background: none;
+  border: solid 2px #6DB8F1;
+  border-radius: 2px;
+}
+
+.countries__name {
+  font-style: italic;
+}
+
+.countries__element {
+  padding: 0;
+}
+
+.countries__property {
+  list-style-type: none;
+}
+
+.countries__property-value {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

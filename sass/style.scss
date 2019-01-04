@@ -1,0 +1,52 @@
+$color-main: #55ACEE;
+$font-main: 'Roboto', sans-serif;
+
+body {
+  font-family: $font-main;
+  background-color: $color-main;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-header {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+.search-button {
+  cursor: pointer;
+  padding: .5vh 1vw;
+  color: #fff;
+  background: none;
+  border: solid 2px #6DB8F1;
+  border-radius: 2px;
+}
+
+.countries {
+
+  &__name {
+    font-style: italic;
+  }
+
+  &__element {
+    padding: 0;
+  }
+
+  &__property{
+    list-style-type: none;
+
+    &-value {
+      font-weight: bold;
+    }
+  }
+}
