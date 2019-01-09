@@ -35,15 +35,19 @@ function showCountriesList(resp) {
     for (var i = 1; i < parameters.length; i++) {
       var listElement = document.createElement('li');
       var countryProperty = item[parameters[i]];
-      console.log(countryProperty);
       listElement.innerHTML = parameterNames[i-1] + ':';
-      if (typeof countryProperty === 'object') {
-        for (var j in countryProperty) {
-          listElement.innerHTML += ' <span class="countries__property-value">' + countryProperty[j].name + '</span>';
+
+      function checkPropertyType(property) {
+        if (typeof property === 'object') {
+          for (var j in property) {
+            listElement.innerHTML += ' <span class="countries__property-value">' + property[j].name + '</span>';
+          }
+        } else {
+          listElement.innerHTML = parameterNames[i-1] + ': <span class="countries__property-value">' + property + '</span>';
         }
-      } else {
-        listElement.innerHTML = parameterNames[i-1] + ': <span class="countries__property-value">' + countryProperty + '</span>';
-      }
+      };
+    
+      checkPropertyType(countryProperty);
       newSearchResult.appendChild(listElement).classList.add("countries__property");
     }
   });
